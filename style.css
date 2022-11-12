@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+body {
+    width: 1200px;
+    margin: auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+
+    font-family: "PT Sans";
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 70px;
+}
+
+.doc-lang-navigation-box {
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.doc-lang__selector {
+    appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    outline-style: none;
+    border: none;
+    font-family: "Tourney";
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.doc-navigation {
+    font-family: "Staatliches";
+    font-size: 22px;
+    letter-spacing: 3%;
+}
+
+.section-name {
+    font-family: "PT Sans";
+    display: inline-flex;
+    align-items: center;
+}
+
+.section-name::before {
+    content: "";
+    width: 100px;
+    height: 8px;
+    display: inline-block;
+    background-color: black;
+    margin-right: 20px;
+}
+
+/*flip card code*/
+
+.card-wrapper {
+    width: 1210px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    border-top: 1px solid #BFBFBF;
+    border-bottom: 1px solid #BFBFBF;
+    margin-top: 40px;
+}
+
+.flip-card {
+    display: inline-block;
+    background-color: transparent;
+    width: 270px;
+    height: 180px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateX(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    transform: rotateX(180deg);
+}
